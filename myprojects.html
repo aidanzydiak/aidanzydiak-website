@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre&family=Roboto:wght@400;500;700&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre&family=Prata&family=Roboto:wght@400;500;700&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre&family=Prata&family=Roboto:wght@400;500;700&family=Source+Code+Pro&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="icon" href="websitepictures/Websiteicon.png">
+
+  <title>My Projects</title>
+
+<style>
+@media only screen and (max-width: 900px) {
+  nav a {display: block}
+  nav span {display: none;}
+}
+
+@media only screen and (min-width: 900px) {
+  .s {display: none;}
+}
+
+.bar {
+  background-color: lightskyblue;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.bar li {
+  height: 100%;
+  width: 105px;
+  border-right: 1px solid lightskyblue;
+}
+
+.bar li a {
+  color: lightskyblue;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: 0.25s;
+  font-family: Ubuntu, Arial;
+  color: white;
+}
+
+.bar li a:hover {
+  background-color: white;
+  cursor: pointer;
+  color: black;
+}
+
+.bar li a.active {
+  background-color: white;
+  color: black;
+}
+
+.dropdown {
+  display: none;
+  list-style: none;
+  padding: 0;
+  background-color: lightskyblue;
+  height: 30px;
+}
+
+.bar li.has-dropdown:hover .dropdown {
+  display: block;
+}
+
+.japan-option {
+  background-color: lightskyblue;
+}
+
+.header-box {
+  display: flex;
+  margin-top: 6vh;
+}
+
+.child {
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  transform-origin: left;
+}
+
+.bounce {
+  animation-name: bounce;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes bounce {
+  0% { transform: translateX(0px); }
+  100% { transform: translateX(31vw); }
+}
+
+.header-text {
+  font-size: 6vw;
+  color: white;
+  background-color: rgb(18, 53, 103);
+  padding: 2vw;
+  border-radius: 1vw;
+  text-align: center;
+}
+
+.revit-title {
+  font-family: "Source code pro", Ubuntu, Arial;
+  text-align: center;
+  font-size: 3vw;
+}
+
+.revit-pictures-container {
+  margin-left: 15vw;
+  margin-right: 15vw;
+  display: flex;
+  margin-bottom: 6vh;
+}
+
+.revit-pictures {
+  width: 30vw;
+  border-radius: 1vw;
+  border-width: 3px;
+  transition: 0.3s;
+}
+
+.revit-pictures:hover {
+  border-color: black;
+}
+
+.revit-description {
+width: 30vw;
+font-family: "Source code pro", Ubuntu, Arial;
+font-size: 1vw;
+margin-left: 4vw;
+margin-right: 4vw;
+font-weight: bold;
+}
+
+.section-block {
+  margin-bottom: 15vh;
+}
+
+.timber-header {
+  text-align: center;
+  font-family: "Source code pro", Ubuntu, Arial;
+  font-size: 3vw;
+  margin-left: 15vw;
+  margin-right: 15vw;
+}
+
+.timber-body {
+  margin-left: 15vw;
+  margin-right: 15vw;
+  font-family: "Source code pro", Ubuntu, Arial;
+  margin-bottom: 15vh;
+}
+
+.shirt-header {
+  margin-bottom: 2vh;
+  text-align: center;
+  font-family: "Source code pro", Ubuntu, Arial;
+  font-size: 3vw;
+  margin-left: 15vw;
+  margin-right: 15vw;
+}
+
+.shirt-picture-grid {
+  position: relative;
+  text-align: center;
+}
+
+.shirt-pictures {
+  width: 20vw;
+  margin-left: 2.5vw;
+  margin-right: 2.5vw;
+}
+
+.shirts-description {
+  font-family: "Source code pro", Ubuntu, Arial;
+  text-align: center;
+  margin-bottom: 5vh;
+  font-size: 1.2vw;
+}
+
+.footer-box {
+  display: flex;
+  width: 100%;
+  background-color: lightgray;
+  height: 150px;
+  margin-top: 100px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-left-box {
+  display: flex;
+}
+
+.footer-info-left {
+  font-family: Prata, Ubuntu, Arial;
+  color: white;
+  size: 16px;
+  text-align: left;
+}
+
+.footer-info-right {
+  font-family: Roboto, Ubuntu, Arial;
+  color: white;
+  size: 16px;
+  text-align: right;
+}
+
+.fa {
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 100%;
+  text-decoration: none;
+}
+
+.fa-instagram {
+  background-color: rgb(95, 32, 141);
+  color: white;
+  margin-left: 1vw;
+}
+
+.fa-linkedin {
+  background-color: rgb(14, 107, 238);
+  color: white;
+}
+
+.fa-youtube {
+  background-color: red;
+  color: white;
+}
+</style>
+</head>
+
+<body>
+
+  <div class="container">
+    <nav>
+      <ul class="bar">
+        <li><a rel="noopener" href="http://127.0.0.1:5500/Sitetrial1.html">my pictures</a></li>
+        <li class="has-dropdown">
+          <a href="#">my trips</a>
+          <ul class="dropdown">
+            <li><a href="http://127.0.0.1:5500/Francepage.html">France</a></li>
+            <li><a class="japan-option" href="http://127.0.0.1:5500/japanpage.html">Japan</a></li>
+          </ul>
+        </li>
+        <li><a rel="noopener" href="http://127.0.0.1:5500/myprojects.html">my projects</a></li>
+        <li><a rel="noopener" href="http://127.0.0.1:5500/aboutme.html">about me</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="header-box">
+    <div class="child bounce">
+      <h1 class="header-text">
+        My projects<br>& skills
+      </h1>
+    </div>
+  </div>
+
+<div class="section-block">
+  <h1 class="revit-title">
+    Revit Structures
+  </h1>
+  <div class="revit-pictures-container">
+    <img class="revit-pictures" src="websitepictures/revitpicture1.png">
+    <p class="revit-description">
+      Having learned the basics of Revit in my free time, I can change materials and cross-sections of beams and columns,
+      as well as implement levels and grids to easily place columns and organize the structure.
+    </p>
+  </div>
+  <div class="revit-pictures-container">
+    <p class="revit-description">
+      I can also incorporate some more complex features into a structural design such as stairs
+      and unperpendicular beams. With this experience in 3D modeling software, I am confident I have
+      the fundamentals needed to develop buildings and bridges in Finite Element Analysis.
+    </p>
+    <img class="revit-pictures" src="websitepictures/revitpicture2.png">
+  </div>
+</div>
+
+<div class="section-block">
+  <h1 class="revit-title">
+    Structural Analysis
+  </h1>
+  <div class="revit-pictures-container">
+    <p class="revit-description">
+      I have used Ftool to evaluate the stresses and strains of members within 2D structures.
+      Using shear and fixed connections, I observe how well moments are distrbuted throughout
+      the members and how differing connections affect overall deflection.
+    </p>
+    <img class="revit-pictures" src="websitepictures/Ftoolpicture1.png">
+  </div>
+  <div class="revit-pictures-container">
+    <img class="revit-pictures" src="websitepictures/ftoolpicture2.png">
+    <p class="revit-description">
+      I appreciate Ftool for its simple learning process and the path it provides into 3D
+      structural analysis.
+    </p>
+  </div>
+</div>
+
+<h1 class="timber-header">National Design Specification Applications</h1>
+<p class="timber-body">Curently the captain of the Timber Strong Design Team at the University of Florida,
+  I am developing and completing statics calculations for a two-story wooden structure that will be presented
+  against other universities in March of 2024. For my calculations, I am following the National Design Specification,
+   using the constants needed to find accurate design strengths according to moisture, temperature, and repetition
+   of load, and I am using Stiffness Method to solve indeterminate components. Loads due to seismic and wind uplift 
+   conditions are also considered. After completing the physical calculations, the structure will be evaluated for its
+    cost efficiency and environmental impact.
+</p>
+
+
+<div class="footer-box">
+  <div class="footer-left-box">
+    <p class="footer-info-left">&NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace;Aidan Zydiak</p>
+    <div class="link-container">
+      <a href="https://www.instagram.com/aidanzydiak/" target="_blank" class="fa fa-instagram"></a>
+      <a href="https://www.linkedin.com/in/aidan-zydiak-68180b235" target="_blank" class="fa fa-linkedin"></a>
+      <a href="https://www.youtube.com/channel/UC90oFqfwhKRK82u0pk2utFg" target="_blank" class="fa fa-youtube"></a>
+    </div>
+  </div>
+    <address class="footer-info-right">Contact at <a href="mailto:arzydiak@gmail.com">arzydiak@gmail.com</a>&NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace;</address>
+</div>
+
+</body>
+</html>

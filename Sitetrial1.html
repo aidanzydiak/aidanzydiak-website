@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre&family=Roboto:wght@400;500;700&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre&family=Prata&family=Roboto:wght@400;500;700&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="icon" href="websitepictures/Websiteicon.png">
+
+<title>My Pictures</title>
+<style>
+@media only screen and (max-width: 900px) {
+  nav a {display: block}
+  nav span {display: none;}
+}
+
+@media only screen and (min-width: 900px) {
+  .s {display: none;}
+}
+
+.header-container {
+  display: grid;
+  margin-top: 28vh;
+  grid-template-columns: 1fr 750px 1fr;
+  border-radius: 20px;
+  margin-bottom: 47vh;
+}
+
+.header-box {
+  color: white;
+  text-transform: uppercase;
+  font-size: 36px;
+  width: 100%;
+  bottom: 45%;
+  display: flex;
+  font-family: Ubuntu, Arial;
+  padding-top: 14vh;
+  padding-bottom: 6vh;
+  text-align: center;
+  font-weight: bold;
+}
+
+#flip {
+  height: 60px;
+  overflow: hidden;
+}
+
+#flip>div>div {
+  color: white;
+  padding: 2px 12px;
+  height: 45px;
+  margin-bottom: 45px;
+  display: inline-block;
+  border-radius: 2px;
+  width: 100px;
+}
+
+#flip div:first-child {
+  animation: show 5s linear infinite;
+}
+
+#flip div div {
+  background: lightcoral;
+}
+
+#flip div:first-child div {
+  background: rgb(114, 72, 148);
+}
+
+#flip div:last-child div {
+  background: lightseagreen;
+}
+
+@keyframes show {
+  0% {margin-top: -270px;}
+  5% {margin-top: -180px;}
+  33% {margin-top: -180px;}
+  38% {margin-top: -90px;}
+  66% {margin-top: -90px;}
+  71% {margin-top: 0px;}
+  99.99% {margin-top: 0px;}
+  100% {margin-top: -270px}
+}
+
+ .picture-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  margin-top: 20px;
+  padding-left: 100px;
+  padding-right: 100px;
+ }
+
+ .picture-frame {
+  padding-left: 20px;
+  margin: auto;
+  position: relative;
+  display: inline-block;
+ }
+
+ .picture {
+  width: 300px;
+  border-radius: 6px;
+  transition: 0.3s;
+ }
+
+.bar {
+  background-color: lightseagreen;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.bar li {
+  height: 100%;
+  width: 105px;
+  border-right: 1px solid lightseagreen;
+}
+
+.bar li a {
+  color: black;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: 0.25s;
+  font-family: Ubuntu, Arial;
+  color: white;
+}
+
+.bar li a:hover {
+  background-color: white;
+  cursor: pointer;
+  color: black;
+}
+
+.bar li a.active {
+  background-color: white;
+  color: black;
+}
+
+.dropdown {
+  display: none;
+  list-style: none;
+  padding: 0;
+  background-color: lightseagreen;
+  height: 30px;
+}
+
+.bar li.has-dropdown:hover .dropdown {
+  display: block;
+}
+
+.japan-option {
+  background-color: lightseagreen;
+}
+
+.footer-box {
+  display: flex;
+  width: 100%;
+  background-color: lightgray;
+  height: 150px;
+  margin-top: 100px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-left-box {
+  display: flex;
+}
+
+.footer-info-left {
+  font-family: Prata, Ubuntu, Arial;
+  color: white;
+  size: 16px;
+  text-align: left;
+}
+
+.footer-info-right {
+  font-family: Roboto, Ubuntu, Arial;
+  color: white;
+  size: 16px;
+  text-align: right;
+}
+
+#background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.a, .b {
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+
+.a {
+  opacity: 1;
+}
+
+.b {
+  opacity: 0;
+  position: absolute;
+  background-color: black;
+  color: white;
+  height: 99%;
+  width: 300px;
+  text-align: center;
+  margin-left: 20px;
+  border-radius: 6px;
+  font-family: Ubuntu, Arial;
+}
+
+.picture-frame:hover .a {
+  opacity: 0.5;
+}
+
+.picture-frame:hover .b {
+  opacity: 0.8;
+}
+
+.picture-description {
+  margin-top: 25%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.fa {
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 100%;
+  text-decoration: none;
+}
+
+.fa-instagram {
+  background-color: rgb(95, 32, 141);
+  color: white;
+  margin-left: 1vw;
+}
+
+.fa-linkedin {
+  background-color: rgb(14, 107, 238);
+  color: white;
+}
+
+.fa-youtube {
+  background-color: red;
+  color: white;
+}
+</style>
+</head>
+
+
+<body>
+<body style="background-color: rgb(255, 255, 255);">
+
+<div class="container">
+  <nav>
+    <ul class="bar">
+      <li><a rel="noopener" href="http://127.0.0.1:5500/Sitetrial1.html">my pictures</a></li>
+      <li class="has-dropdown">
+        <a href="#">my trips</a>
+        <ul class="dropdown">
+          <li><a href="http://127.0.0.1:5500/Francepage.html">France</a></li>
+          <li><a class="japan-option" href="http://127.0.0.1:5500/japanpage.html">Japan</a></li>
+        </ul>
+      </li>
+      <li><a rel="noopener" href="http://127.0.0.1:5500/myprojects.html">my projects</a></li>
+      <li><a rel="noopener" href="http://127.0.0.1:5500/aboutme.html">about me</a></li>
+    </ul>
+  </nav>
+</div>
+
+<div class="header-container">
+  <video id="background-video" autoplay loop muted poster="websitepictures/IMG_0233.jpg">
+    <source src="websitepictures/Headervideo1.mp4" type="video/mp4">
+  </video>
+  <div></div>
+  <div class="header-box">
+    I &NonBreakingSpace;
+    <div id="flip">
+      <div>
+        <div>walk</div>
+      </div>
+      <div>
+        <div>bike</div>
+      </div>
+      <div>
+        <div>hike</div>
+      </div>
+    </div>
+    &NonBreakingSpace; around and take pictures.
+  </div>
+  <div></div>
+</div>  
+
+<div class="picture-grid">
+  <div class="blank space"></div>
+
+  <div class="picture-frame">
+    <div class="a">
+      <img class="picture" src="websitepictures/GPTempDownload (3).JPG">
+    </div>
+    <div class="b">
+      <p class="picture-description">Gastronomical capital<br>of the world<br>Lyon, France</p>
+    </div>
+  </div>
+
+  <div class="picture-frame">
+    <div class="a">
+      <img class="picture" src="websitepictures/GOPR0792.JPG">
+    </div>
+    <div class="b">
+      <p class="picture-description">Jockey's Ridge State Park<br>Outer Banks, NC</p>
+    </div>
+  </div>
+
+  <div class="picture-frame">
+    <div class="a">
+      <img class="picture" src="websitepictures/GPTempDownload (5).JPG">
+    </div>
+    <div class="b">
+      <p class="picture-description">One of many courtyards<br>Barcelona, Spain
+      </p>
+    </div>
+  </div>
+
+  <div class="blank space"></div>
+</div>
+
+<div class="picture-grid">
+  <div class="blank space"></div>
+
+  <div class="picture-frame">
+    <div class="a">
+      <img class="picture" src="websitepictures/IMG_3930.png">
+    </div>
+    <div class="b">
+      <p class="picture-description">Castillo San Crist&ograve;bal<br>San Juan, PR</p>
+    </div>
+  </div>
+  
+  <div class="picture-frame">
+    <div class="a">
+      <img class="picture" src="websitepictures/IMG_0068.jpeg">
+    </div>
+    <div class="b">
+      <p class="picture-description">Red Ruffed Lemur<br>Gainesville, FL</p>
+    </div>
+  </div>
+
+  <div class="picture-frame">
+    <div class="a">
+      <img class="picture" src="websitepictures/IMG_0067.jpeg">
+    </div>
+    <div class="b">
+      <p class="picture-description">Eddie the Gibbon<br>Gainesville, FL</p>
+    </div>
+  </div>
+
+  <div class="blank space"></div>
+</div>
+
+<div class="picture-grid">
+  <div class="blank space"></div>
+
+  <div class="picture-frame">
+    <div class="a">
+      <img class="picture" src="websitepictures/DSC_0815.JPG">
+    </div>
+    <div class="b">
+      <p class="picture-description">Lake Champlaign, VT</p>
+    </div>
+  </div>
+
+  <div class="picture-frame">
+    <div class="a">
+      <img class="picture" src="websitepictures/DSC_0988.JPG">
+    </div>
+    <div class="b">
+      <p class="picture-description">Ybor Neighborhood<br>Tampa, FL </p>
+    </div>
+  </div>
+
+  <div class="picture-frame">
+    <div class="a">
+      <img class="picture" src="websitepictures/GPTempDownload (4).JPG">
+    </div>
+    <div class="b">
+      <p class="picture-description">La Sagrada Familia will<br>be finished one day<br>Barcelona, Spain</p>
+    </div>
+  </div>
+
+  <div class="blank space"></div>
+</div>
+
+<div class="picture-grid">
+  <div class="blank space"></div>
+
+  <div class="picture-frame">
+    <div class="a">
+      <img class="picture" src="websitepictures/IMG-3250_01.jpg">
+    </div>
+    <div class="b">
+      <p class="picture-description">Thunersee Lake, Switzerland</p>
+    </div>
+  </div>
+
+  <div class="picture-frame">
+    <div class="a">
+      <img class="picture" src="websitepictures/GPTempDownload (1).jpg">
+    </div>
+    <div class="b">
+      <p class="picture-description">Grindelwald, Switzerland</p>
+    </div>
+  </div>
+  
+  <div class="picture-frame">
+    <div class="a">
+      <img class="picture" src="websitepictures/GPTempDownload (2).jpg">
+    </div>
+    <div class="b">
+      <p class="picture-description">Hardergrat Trail<br> Lake Brienz, Switzerland
+      </p>
+    </div>
+  </div>
+
+  <div class="blank space"></div>
+</div>
+
+<div class="picture-grid">
+  <div class="blank space"></div>
+
+  <div class="picture-frame">
+    <div class="a">
+      <img class="picture" src="websitepictures/yboratnight2.png">
+    </div>
+    <div class="b">
+      <p class="picture-description">Also Ybor Neighborhood<br>Tampa, FL</p>
+    </div>
+  </div>
+
+  <div class="picture-frame">
+    <div class="a">
+      <img class="picture" src="websitepictures/DSC_1009.png">
+    </div>
+    <div class="b">
+      <p class="picture-description">Weird Fish Statue<br>Gainesville, FL</p>
+    </div>
+  </div>
+
+  <div class="picture-frame">
+    <div class="a">
+      <img class="picture" src="websitepictures/DSC_1037.png">
+    </div>
+    <div class="b">
+      <p class="picture-description">Downtown Gainesville, FL</p>
+    </div>
+  </div>
+
+  <div class="blank space"></div>
+</div>
+
+
+
+  <div class="footer-box">
+    <div class="footer-left-box">
+      <p class="footer-info-left">&NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace;Aidan Zydiak</p>
+      <div class="link-container">
+        <a href="https://www.instagram.com/aidanzydiak/" target="_blank" class="fa fa-instagram"></a>
+        <a href="https://www.linkedin.com/in/aidan-zydiak-68180b235" target="_blank" class="fa fa-linkedin"></a>
+        <a href="https://www.youtube.com/channel/UC90oFqfwhKRK82u0pk2utFg" target="_blank" class="fa fa-youtube"></a>
+      </div>
+    </div>
+      <address class="footer-info-right">Contact at <a href="mailto:arzydiak@gmail.com">arzydiak@gmail.com</a>&NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace;</address>
+  </div>
+</body>
+
+
+</html>

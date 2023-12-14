@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre&family=Roboto:wght@400;500;700&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre&family=Prata&family=Roboto:wght@400;500;700&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="icon" href="websitepictures/Websiteicon.png">
+
+  <title>France</title>
+
+<style>
+@media only screen and (max-width: 900px) {
+  nav a {display: block}
+  nav span {display: none;}
+}
+
+@media only screen and (min-width: 900px) {
+  .s {display: none;}
+}
+
+.bar {
+  background-color: gray;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.bar li {
+  height: 100%;
+  width: 105px;
+  border-right: 1px solid gray;
+}
+
+.bar li a {
+  color: gray;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: 0.25s;
+  font-family: Ubuntu, Arial;
+  color: white;
+}
+
+.bar li a:hover {
+  background-color: white;
+  cursor: pointer;
+  color: black;
+}
+
+.bar li a.active {
+  background-color: white;
+  color: black;
+}
+
+.dropdown {
+  display: none;
+  list-style: none;
+  padding: 0;
+  background-color: gray;
+  height: 30px;
+}
+
+.bar li.has-dropdown:hover .dropdown {
+  display: block;
+}
+
+.japan-option {
+  background-color: gray;
+}
+
+.header-box {
+  display: block;
+  margin-top: 30vh;
+  text-align: center;
+}
+
+#picture1 {
+  z-index: -1;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+}
+
+#picture2 {
+  z-index: -1;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+
+#picture3 {
+  z-index: -1;
+  height: 100%;
+  width: 33vw;
+  top: 0;
+  object-fit: cover;
+  margin-left: 33vw;
+  position: absolute;
+}
+
+.header-text {
+  font-size: 8vw;
+  color: white;
+}
+
+.first-para-container {
+  display: block;
+  margin-top: 55vh;
+  margin-bottom: 10vh;
+}
+
+.first-para {
+  font-size: 1.4vw;
+  font-family: Prata, Roboto, Arial;
+  margin-left: 15vw;
+  margin-right: 15vw;
+}
+
+.second-para-container {
+  margin-bottom: 10vh;
+}
+
+.second-para {
+  font-size: 1.4vw;
+  font-family: Prata, Roboto, Arial;
+  margin-left: 15vw;
+  margin-right: 2vw;
+}
+
+.third-para-container {
+  display: flex;
+  margin-bottom: 10vh;
+}
+
+.third-para-pictures-container {
+  display: block;
+  margin-left: 16vw;
+}
+
+.third-para-pictures {
+  width: 20vw;
+  padding-bottom: 2vh;
+}
+
+.third-para {
+  font-size: 1.4vw;
+  font-family: Prata, Roboto, Arial;
+  margin-left: 2vw;
+  margin-right: 15vw;
+  padding-top: 6vh;
+}
+
+.fourth-para-container {
+  display: flex;
+  margin-bottom: 10vh;
+}
+
+.fourth-para-pictures-container {
+  display: block;
+  margin-right: 15vw;
+}
+
+.fourth-para-picture {
+  width: 20vw;
+  margin-left: 2vw;
+}
+
+.fourth-para {
+  font-size: 1.4vw;
+  font-family: Prata, Roboto, Arial;
+  margin-left: 15vw;
+  padding-top: 7vh;
+}
+
+.last {
+  display: flex;
+}
+
+.last-picture {
+  width: 40vw;
+  margin-left: 15vw;
+  margin-bottom: 10vh;
+}
+
+.last-para {
+  font-size: 1.4vw;
+  font-family: Prata, Roboto, Arial;
+  margin-left: 2vw;
+  margin-right: 15vw;
+}
+
+.second-para-container {
+  display: flex;
+}
+
+.lille-picture {
+  margin-right: 20vw;
+  width: 20vw;
+}
+
+.footer-box {
+  display: flex;
+  width: 100%;
+  background-color: lightgray;
+  height: 150px;
+  margin-top: 100px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-left-box {
+  display: flex;
+}
+
+.footer-info-left {
+  font-family: Prata, Ubuntu, Arial;
+  color: white;
+  size: 16px;
+  text-align: left;
+}
+
+.footer-info-right {
+  font-family: Roboto, Ubuntu, Arial;
+  color: white;
+  size: 16px;
+  text-align: right;
+}
+
+.fa {
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 100%;
+  text-decoration: none;
+}
+
+.fa-instagram {
+  background-color: rgb(95, 32, 141);
+  color: white;
+  margin-left: 1vw;
+}
+
+.fa-linkedin {
+  background-color: rgb(14, 107, 238);
+  color: white;
+}
+
+.fa-youtube {
+  background-color: red;
+  color: white;
+}
+
+</style>
+</head>
+
+  <body>
+
+    <img id="picture1" src="websitepictures/IMG_2986.jpg">
+    <img id="picture2" src="websitepictures/89BF35E2-2D2F-4A9E-9F05-8C6B90B4BE7E.JPG">
+    <img id="picture3" src="websitepictures/Mountain12.jpg">
+
+    <div class="container">
+      <nav>
+        <ul class="bar">
+          <li><a rel="noopener" href="http://127.0.0.1:5500/Sitetrial1.html">my pictures</a></li>
+          <li class="has-dropdown">
+            <a href="#">my trips</a>
+            <ul class="dropdown">
+              <li><a href="http://127.0.0.1:5500/Francepage.html">France</a></li>
+              <li><a class="japan-option" href="http://127.0.0.1:5500/japanpage.html">Japan</a></li>
+            </ul>
+          </li>
+          <li><a rel="noopener" href="http://127.0.0.1:5500/myprojects.html">my projects</a></li>
+          <li><a rel="noopener" href="http://127.0.0.1:5500/aboutme.html">about me</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header-box">
+      <h1 class="header-text">
+        France
+      </h1>
+    </div>
+
+    <div class="first-para-container">
+      <p class="first-para">I was fortunate to study abroad in Lille, France during the summer of 2022,
+         where I took Physics II and Engineering Arts. The program provided 
+         an exceptional opportunity to explore the culture and architecture throughout 
+         France and Belgium, as we were provided field trips and a free week during 
+         the semester.</p>
+    </div>
+
+    <div class="second-para-container">
+      <p class="second-para">Lille, my host city, is a relatively small 
+        urban area in the most northern region of France. A 25-minute walk 
+        could bring one from the edge of town to the Grand Place, the central square. 
+        Restaurants, clothing retailers, bars, and bakeries are ubiquitous in Lille, 
+        making every street feel like its own downtown. Between the cobblestone streets, 
+        narrow alleys, and lack of cars, it is an incredible experience for someone who 
+        is out of the U.S. for the first time. Living here for two months, I learned that 
+        a city can be simultaneously busy yet quiet and tame. </p>
+      <img class="lille-picture" src="websitepictures/44D85367-CAC4-49A8-885E-64E845574E72.jpg">
+    </div>
+
+    <div class="third-para-container">
+      <div class="third-para-pictures-container">
+        <img class="third-para-pictures" src="websitepictures/Lyonpicture1.jpg">
+        <img class="third-para-pictures" src="websitepictures/IMG_2997.jpg">
+      </div>
+      <p class="third-para">
+        It seemed like Lyon, France was built as a movie set for romantic vacation scenes. 
+        It seriously would be difficult to find something aesthetically wrong with this 
+        town; the sand-colored buildings with clay barrel roofing planted on the hillside 
+        and reflecting off a Caribbean blue river was a phenomenal view. The town also 
+        impresses with its food, as Lyon is named the gastronomical capital of the world. 
+        I can at least vouch for the eggplant marinara and eggs on toast; they were the 
+        cheapest items on their menus, but they had me planning on recreating those dishes 
+        for when I got back home.
+      </p>
+    </div>
+
+    <div class="fourth-para-container">
+      <p class="fourth-para">
+        Bruges, one of our field trip destinations, is a beautiful Venice-like 
+        town in Belgium. This area is trapped in the 1700s with its historic 
+        architecture and lack of modern facades and exteriors. A canal tour around the 
+        community is one way to see the Gothic style buildings. When walking, though, 
+        you’ll also pass by numerous chocolate and macaroon shops. During my two trips here, 
+        I had the best desserts of my entire study abroad.
+      </p>
+      <div class="fourth-para-pictures-container">
+      <img class="fourth-para-picture" src="websitepictures/IMG_3551.jpg">
+      </div>
+    </div>
+    <div class="last">
+      <img class="last-picture" src="websitepictures/Brugespicture.jpg">
+      <p class="last-para">These towns signficantly improved my awareness about the approaches
+         to cultural preservation through architecture and zoning that the U.S. tends
+         to disregard. There are definitely some advantages, aesthetically and functionally, to
+        the way France and Belgium have chosen to modernize their cities.</p>
+    </div>
+
+    <div class="footer-box">
+      <div class="footer-left-box">
+        <p class="footer-info-left">&NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace;Aidan Zydiak</p>
+        <div class="link-container">
+          <a href="https://www.instagram.com/aidanzydiak/" target="_blank" class="fa fa-instagram"></a>
+          <a href="https://www.linkedin.com/in/aidan-zydiak-68180b235" target="_blank" class="fa fa-linkedin"></a>
+          <a href="https://www.youtube.com/channel/UC90oFqfwhKRK82u0pk2utFg" target="_blank" class="fa fa-youtube"></a>
+        </div>
+      </div>
+        <address class="footer-info-right">Contact at <a href="mailto:arzydiak@gmail.com">arzydiak@gmail.com</a>&NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace;</address>
+    </div>
+
+  </body>
+</html>

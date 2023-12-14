@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre&family=Roboto:wght@400;500;700&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre&family=Prata&family=Roboto:wght@400;500;700&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="icon" href="websitepictures/Websiteicon.png">
+
+  <title>About Me</title>
+
+<style>
+@media only screen and (max-width: 900px) {
+  nav a {display: block}
+  nav span {display: none;}
+}
+
+@media only screen and (min-width: 900px) {
+  .s {display: none;}
+}
+
+#about-background-picture {
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -2;
+}
+
+#background-snow {
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.bar {
+  background-color: black;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.bar li {
+  height: 100%;
+  width: 105px;
+  border-right: 1px solid black;
+}
+
+.bar li a {
+  color: black;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: 0.25s;
+  font-family: Ubuntu, Arial;
+  color: white;
+}
+
+.bar li a:hover {
+  background-color: white;
+  cursor: pointer;
+  color: black;
+}
+
+.bar li a.active {
+  background-color: white;
+  color: black;
+}
+
+.dropdown {
+  display: none;
+  list-style: none;
+  padding: 0;
+  background-color: black;
+  height: 30px;
+}
+
+.bar li.has-dropdown:hover .dropdown {
+  display: block;
+}
+
+.japan-option {
+  background-color: black;
+}
+
+.header-box {
+  display: block;
+  padding-top: 3vh;
+  text-align: center;
+}
+
+.main-header {
+  font-family: Prata, Roboto, Arial;
+  font-size: 3.6vw;
+  font-weight: normal;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  padding-right: 2%;
+  color: white;
+  }
+
+.sriracha-ad {
+  display: flex;
+  font-size: 3.2vw;
+  font-weight: bold;
+  padding-left: 5vw;
+  line-height: 1;
+  color: white;
+  margin-top: 71vh;
+}
+
+.about-picture-container {
+  opacity: 0;
+}
+
+.main-header:hover .about-picture-container {
+  opacity: 1;
+}
+
+.about-me-picture {
+  width: 10vw;
+  padding-left: 2vw;
+  justify-content: center;
+  border-radius: 7px 7px 7px 7px;
+}
+
+.intro-container {
+  margin-top: 111vh;
+  display: block;
+}
+
+.intro-paragraph {
+  font-family: Prata, Arial;
+  color: black;
+  font-size: 1.5vw;
+  padding-left: 20vw;
+  padding-right: 20vw;
+}
+
+.footer-box {
+  display: flex;
+  width: 100%;
+  background-color: lightgray;
+  height: 150px;
+  margin-top: 100px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-left-box {
+  display: flex;
+}
+
+.footer-info-left {
+  font-family: Prata, Ubuntu, Arial;
+  color: white;
+  size: 16px;
+  text-align: left;
+}
+
+.footer-info-right {
+  font-family: Roboto, Ubuntu, Arial;
+  color: white;
+  size: 16px;
+  text-align: right;
+}
+
+.fa {
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 100%;
+  text-decoration: none;
+}
+
+.fa-instagram {
+  background-color: rgb(95, 32, 141);
+  color: white;
+  margin-left: 1vw;
+}
+
+.fa-linkedin {
+  background-color: rgb(14, 107, 238);
+  color: white;
+}
+
+.fa-youtube {
+  background-color: red;
+  color: white;
+}
+
+.signature-video-container {
+  padding-left: 19vw;
+}
+
+#signature-video {
+  width: 16vw;
+}
+</style>
+</head>
+
+<body>
+<body style="background-color: rgb(255, 255, 255);">
+
+<img id="about-background-picture" src="websitepictures/IMG_3808.jpg">
+<img id="background-snow" src="websitepictures/Untitled - November 10, 2023 22.15.33(1).png">
+
+  <div class="container">
+    <nav>
+      <ul class="bar">
+        <li><a rel="noopener" href="http://127.0.0.1:5500/Sitetrial1.html">my pictures</a></li>
+        <li class="has-dropdown">
+          <a href="#">my trips</a>
+          <ul class="dropdown">
+            <li><a href="http://127.0.0.1:5500/Francepage.html">France</a></li>
+            <li><a class="japan-option" href="http://127.0.0.1:5500/japanpage.html">Japan</a></li>
+          </ul>
+        </li>
+        <li><a rel="noopener" href="http://127.0.0.1:5500/myprojects.html">my projects</a></li>
+        <li><a rel="noopener" href="http://127.0.0.1:5500/aboutme.html">about me</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="header-box">
+    <h1 class="main-header">
+    About me
+    </h1>
+  </div>
+  
+  <div>
+    <h2 class="sriracha-ad">
+      Has the Sriracha<br>shortage ended by the<br>time you've read this?
+    </h2>
+  </div>
+
+  <div class="intro-container">
+    <p class="intro-paragraph">Hi, I am Aidan Zydiak. I like most things outdoors. 
+      Mountain biking, snowboarding, tennis, running, and hiking are a few of my main activities. 
+      Keeping my mind busy and staying up to date with the world are also important to me. 
+      You will often find me working on small projects and watching content about construction, 
+      CAD program tutorials, and photography skills.<br><br>At the moment, the primary purpose of this website
+       is to introduce myself to employers. I hope you look around and find some features interesting.
+        Civil engineering (my major) is of course my top interest, but I am becoming increasingly 
+        aware of the relevance of programming. This site was coded in HTML and CSS, but I plan on 
+        learning other languages such as Python.<br><br>Within civil engineering, I hope to work in the 
+        structural or material forensics fields. BIM software, structural analysis, and failure 
+        analysis in the field all sound exciting to me. I strongly plan on acquiring a master’s 
+        degree, although not at the University of Florida where I currently attend undergrad. 
+        After some years of experience in my fields of interest, I would ultimately like to work 
+        on projects targeting people in need. This could mean the repairing or rebuilding of 
+        communities in war-torn regions, or designing for those who never had critical infrastructure 
+        to begin with.<br><br>Overall, I hope this site gives you a more visual sense of my character and 
+        interests that a conversation or resume has difficulty emphasizing.</p>
+  </div>
+
+  <div class="signature-video-container">
+    <video id="signature-video" autoplay muted>
+      <source src="websitepictures/RPReplay_Final1699967522.mp4" type="video/mp4">
+    </video>
+  </div>
+
+<!-- I need to use javascript to make a delay in the signature -->
+
+  <div class="footer-box">
+    <div class="footer-left-box">
+      <p class="footer-info-left">&NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace;Aidan Zydiak</p>
+      <div class="link-container">
+        <a href="https://www.instagram.com/aidanzydiak/" target="_blank" class="fa fa-instagram"></a>
+        <a href="https://www.linkedin.com/in/aidan-zydiak-68180b235" target="_blank" class="fa fa-linkedin"></a>
+        <a href="https://www.youtube.com/channel/UC90oFqfwhKRK82u0pk2utFg" target="_blank" class="fa fa-youtube"></a>
+      </div>
+    </div>
+      <address class="footer-info-right">Contact at <a href="mailto:arzydiak@gmail.com">arzydiak@gmail.com</a>&NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace;</address>
+  </div>
+</body>
+</html>
+
